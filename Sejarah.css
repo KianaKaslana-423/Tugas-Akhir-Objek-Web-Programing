@@ -1,0 +1,21 @@
+body {
+    font-family: "Public Sans", sans-serif;
+}
+
+/* Garis vertikal untuk Timeline (jika nanti bagian ini diisi) */
+.timeline-line {
+    width: 2px;
+    background: #028bd4;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Responsif untuk garis Timeline di layar mobile */
+@media (max-width: 768px) {
+    .timeline-line {
+        left: 20px;
+    }
+}

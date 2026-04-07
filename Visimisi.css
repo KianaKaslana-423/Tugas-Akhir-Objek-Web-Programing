@@ -1,0 +1,8 @@
+/* Styling CSS tambahan untuk halaman Visi & Misi */
+body { 
+    font-family: 'Public Sans', sans-serif; 
+}
+
+html {
+    scroll-behavior: smooth;
+}

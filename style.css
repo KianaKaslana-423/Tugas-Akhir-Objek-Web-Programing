@@ -1,0 +1,1291 @@
+/* --- PENGATURAN UMUM --- */
+html {
+    scroll-behavior: smooth; /* Efek scroll halus saat klik menu kontak */
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7f8;
+    color: #2E3B4E;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Warna Dasar */
+:root {
+    --primary: #0288D1;
+    --deep-royal: #1A237E;
+    --light-sky: #E3F2FD;
+    --dark-slate: #2E3B4E;
+}
+
+/* --- HEADER & NAVIGASI --- */
+.top-bar {
+    width: 100%;
+    height: 4px;
+    background-color: var(--deep-royal);
+}
+
+.main-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background-color: white;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-right: 2rem;
+}
+
+.logo-icon {
+    font-size: 2.25rem;
+    color: var(--primary);
+}
+
+.logo-text h1 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1;
+    color: var(--deep-royal);
+}
+
+.logo-text span {
+    font-size: 0.625rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.7;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+.nav-link {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--dark-slate);
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 0.5rem 0;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+/* Dropdown Menu CSS Biasa */
+.dropdown {
+    position: relative;
+    padding: 0.5rem 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 220px;
+    background-color: white;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 0.5rem 0.5rem;
+    border: 1px solid #f1f5f9;
+    z-index: 50;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--dark-slate);
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.dropdown-content a:hover {
+    color: var(--primary);
+    background-color: #f8fafc;
+}
+
+.action-area {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-left: 2rem;
+}
+
+.btn-donasi {
+    padding: 0.5rem 1.25rem;
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.btn-donasi:hover {
+    background-color: var(--deep-royal);
+}
+
+.icon-bantuan {
+    padding: 0.5rem;
+    color: var(--dark-slate);
+    text-decoration: none;
+}
+
+.icon-bantuan:hover {
+    color: var(--primary);
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(2, 136, 209, 0.2); /* Sesuai kode lama kamu */
+}
+
+.hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    text-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.hero-content h2 span {
+    color: var(--light-sky);
+}
+
+.hero-content p {
+    font-size: 1.125rem;
+    max-width: 36rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.slider-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.slider-dots .dot.active {
+    background-color: white;
+}
+
+/* --- JADWAL SHALAT SECTION --- */
+.jadwal-section {
+    background-color: var(--light-sky);
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(2, 136, 209, 0.1);
+}
+
+.jadwal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.jadwal-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.jadwal-title span.material-symbols-outlined {
+    color: var(--primary);
+}
+
+.jadwal-title h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--deep-royal);
+    margin: 0;
+}
+
+.jadwal-title .tanggal {
+    font-size: 0.875rem;
+    opacity: 0.6;
+    margin-left: 0.5rem;
+}
+
+.jadwal-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1rem;
+}
+
+.jadwal-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    border-bottom: 4px solid var(--primary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+.jadwal-card:hover {
+    transform: scale(1.05);
+}
+
+.jadwal-card.disabled {
+    border-bottom-color: #e2e8f0;
+    opacity: 0.8;
+}
+
+.jadwal-card.disabled:hover {
+    transform: none; /* Waktu terbit tidak perlu membesar saat dihover */
+}
+
+.icon-waktu {
+    color: var(--deep-royal);
+    margin-bottom: 0.5rem;
+}
+
+.nama-waktu {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+}
+
+.jam-waktu {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.jam-terbit {
+    color: #475569;
+}
+
+/* --- LOKASI KAMI SECTION --- */
+.main-content {
+    padding: 4rem 0;
+}
+
+.lokasi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.lokasi-info h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+}
+
+.deskripsi-lokasi {
+    font-size: 1.125rem;
+    color: #475569;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.kontak-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.kontak-item {
+    display: flex;
+    gap: 1rem;
+}
+
+.kontak-item .material-symbols-outlined {
+    color: var(--primary);
+}
+
+.kontak-item h5 {
+    font-weight: 700;
+    margin: 0;
+}
+
+.kontak-item p {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin: 0.25rem 0 0 0;
+}
+
+.lokasi-map {
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 8px solid var(--light-sky);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    background-color: #e2e8f0;
+}
+
+/* --- FOOTER SECTION --- */
+.main-footer {
+    background-color: var(--deep-royal);
+    color: white;
+    padding-top: 5rem;
+    padding-bottom: 2.5rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-bottom: 4rem;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-logo .material-symbols-outlined {
+    color: var(--primary);
+    font-size: 2.25rem;
+}
+
+.footer-logo h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.footer-col p {
+    color: #cbd5e1;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.footer-col h3 {
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary);
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-col ul a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: color 0.2s;
+}
+
+.footer-col ul a:hover {
+    color: white;
+}
+
+.newsletter-desc {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.form-newsletter {
+    display: flex;
+}
+
+.input-email {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    color: white;
+    width: 100%;
+}
+
+.input-email::placeholder {
+    color: #64748b;
+}
+
+.input-email:focus {
+    outline: 1px solid var(--primary);
+}
+
+.btn-kirim {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0 1rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-kirim:hover {
+    background-color: white;
+    color: var(--primary);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.social-links a:hover {
+    background-color: var(--primary);
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.875rem;
+}
+
+/* Responsif (Agar bagus saat dibuka di layar kecil/tablet) */
+@media (max-width: 1024px) {
+    .jadwal-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .lokasi-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .main-nav {
+        display: none; /* Sembunyikan menu navigasi horizontal di tablet/mobile */
+    }
+}
+
+@media (max-width: 640px) {
+    .jadwal-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================================================
+   TAMBAHAN CSS UNTUK HALAMAN SELAIN HOME (Ibadah & Dakwah) 
+   ========================================================= */
+
+/* Banner Khusus Halaman Dalam */
+.page-hero {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Lebih pendek dari banner Home */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Mengubah posisi teks menjadi di tengah khusus untuk halaman dalam */
+.page-hero .hero-content {
+    align-items: center;
+    text-align: center;
+}
+
+/* Judul Bagian (Section Header) */
+.section-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid var(--light-sky);
+    padding-bottom: 1rem;
+}
+
+.section-header .icon-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.section-header h3 {
+    font-size: 1.875rem;
+    color: var(--deep-royal);
+    margin: 0;
+    font-weight: 700;
+}
+
+/* Kotak-kotak Layanan (Cards) */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-top: 4px solid var(--primary);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Efek melayang saat kursor diarahkan */
+}
+
+.card h4 {
+    font-size: 1.25rem;
+    color: var(--deep-royal);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.card p {
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsif untuk Layar Kecil */
+@media (max-width: 768px) {
+    .grid-cards {
+        grid-template-columns: 1fr; /* Jadi 1 kolom bersusun ke bawah di HP */
+    }
+}
+/* =========================================================
+   TAMBAHAN CSS UNTUK HALAMAN JADWAL KAJIAN
+   ========================================================= */
+
+.kajian-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto; /* Menengahkan posisi daftar jadwal */
+}
+
+.kajian-card {
+    display: flex;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-left: 6px solid var(--primary);
+    transition: transform 0.2s;
+}
+
+.kajian-card:hover {
+    transform: translateX(10px); /* Efek bergeser ke kanan saat di-hover */
+}
+
+.kajian-time {
+    background-color: var(--light-sky);
+    padding: 1.5rem;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-right: 1px solid #e2e8f0;
+}
+
+.kajian-time h4 {
+    color: var(--deep-royal);
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.kajian-time span {
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+}
+
+.kajian-details {
+    padding: 1.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.kajian-details h3 {
+    margin: 0 0 0.5rem 0;
+    color: var(--deep-royal);
+    font-size: 1.25rem;
+}
+
+.kajian-ustadz {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #0288D1; /* Warna biru untuk nama ustadz */
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.kajian-desc {
+    margin: 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Responsif untuk Layar HP */
+@media (max-width: 640px) {
+    .kajian-card {
+        flex-direction: column;
+    }
+    .kajian-time {
+        min-width: auto;
+        padding: 1rem;
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+    }
+}
+/* =========================================================
+   TAMBAHAN CSS UNTUK HALAMAN BERITA & ARTIKEL
+   ========================================================= */
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.news-card {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    background-color: #cbd5e1; /* Warna abu-abu jika gambar gagal dimuat */
+}
+
+.news-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Membuat tombol di bawah rata jika panjang teks berbeda */
+}
+
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.news-category {
+    background-color: var(--light-sky);
+    color: var(--primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.news-date {
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.news-title {
+    font-size: 1.25rem;
+    color: var(--deep-royal);
+    margin: 0 0 0.75rem 0;
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+.news-excerpt {
+    color: #475569;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0 0 1.5rem 0;
+    flex-grow: 1; /* Mendorong tombol baca selengkapnya ke bawah */
+}
+
+.news-readmore {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary);
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: color 0.2s;
+    margin-top: auto; /* Memastikan tombol selalu di paling bawah kartu */
+}
+
+.news-readmore:hover {
+    color: var(--deep-royal);
+}
+
+/* Responsif untuk Tablet dan HP */
+@media (max-width: 1024px) {
+    .news-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    }
+}
+
+@media (max-width: 640px) {
+    .news-grid {
+        grid-template-columns: 1fr; /* 1 kolom berbaris ke bawah di HP */
+    }
+}
+/* =========================================================
+   TAMBAHAN CSS UNTUK HALAMAN GALERI KEGIATAN
+   ========================================================= */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolom di layar desktop */
+    gap: 1.5rem; /* Jarak antar foto */
+}
+
+.gallery-item {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden; /* Memastikan konten tidak keluar dari radius */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-5px); /* Sedikit melayang saat dihover */
+}
+
+.gallery-image {
+    width: 100%;
+    height: 250px; /* Tinggi kotak foto fix */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover .gallery-image {
+    transform: scale(1.1); /* Efek zoom gambar saat dihover */
+}
+
+/* Info yang muncul saat hover */
+.gallery-hover-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 1.5rem 1rem 1.5rem; /* Padding bawah lebih besar untuk teks */
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* Gradien gelap agar teks terbaca */
+    color: white;
+    opacity: 0; /* Tersembunyi secara default */
+    transition: opacity 0.3s ease;
+    box-sizing: border-box;
+}
+
+.gallery-item:hover .gallery-hover-info {
+    opacity: 1; /* Muncul saat dihover */
+}
+
+.gallery-hover-info h5 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.gallery-hover-info span {
+    font-size: 0.875rem;
+    opacity: 0.8;
+}
+
+/* Responsif untuk Tablet dan HP */
+@media (max-width: 1024px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 kolom di tablet */
+    }
+}
+
+@media (max-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: 1fr; /* 1 kolom di HP */
+    }
+    .gallery-image {
+        height: 200px; /* Tinggi foto disesuaikan di HP */
+    }
+}
+/* --- TAMPILAN JAM REAL-TIME --- */
+.jam-sekarang {
+    background-color: var(--primary);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px; /* Membuat ujungnya membulat */
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-left: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
+    display: inline-block;
+}
+/* =========================================================
+   TAMBAHAN CSS UNTUK HALAMAN DONASI (CROWDFUNDING)
+   ========================================================= */
+
+body.bg-donasi {
+    background-color: #f4f7f9; /* Warna latar belakang abu-abu sangat muda */
+}
+
+/* Hero Section Khusus Donasi */
+.hero-donasi {
+    background-color: #1A237E; /* Warna Biru Gelap sesuai gambar */
+    /* Opsional: Jika punya gambar gedung, gunakan baris di bawah ini */
+    /* background-image: linear-gradient(rgba(26, 35, 126, 0.8), rgba(26, 35, 126, 0.9)), url('gedung.jpg'); */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+.hero-kategori {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #4fc3f7; /* Biru muda */
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero-donasi h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.2;
+}
+
+.hero-donasi p {
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #cbd5e1;
+}
+
+/* Kategori Donasi Grid (4 Kotak) */
+.kategori-donasi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+}
+
+.kategori-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    border-top: 4px solid transparent;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s;
+}
+
+.kategori-card:hover, .kategori-card.active {
+    border-top-color: var(--primary);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+.icon-lingkaran {
+    width: 48px;
+    height: 48px;
+    background-color: var(--light-sky);
+    color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.kategori-card h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--deep-royal);
+    font-size: 1.25rem;
+}
+
+.kategori-card p {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.kategori-card a {
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Wrapper Form Donasi Utama */
+.form-donasi-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.form-donasi-info h2 {
+    font-size: 2rem;
+    color: var(--deep-royal);
+    margin: 0 0 1rem 0;
+    line-height: 1.3;
+}
+
+.form-donasi-info p {
+    color: #475569;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.fitur-keamanan {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.fitur-keamanan h5 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+    color: var(--deep-royal);
+}
+
+.fitur-keamanan p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+/* Desain Kartu Form (Kanan) */
+.form-donasi-card {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1);
+}
+
+.form-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    letter-spacing: 1px;
+    margin-bottom: 0.75rem;
+}
+
+.mt-4 { margin-top: 1.5rem; }
+.w-full { width: 100%; box-sizing: border-box; }
+
+.nominal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-nominal {
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    background: white;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    color: #475569;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-nominal:hover {
+    border-color: var(--primary);
+}
+
+.btn-nominal.active {
+    background-color: var(--light-sky);
+    border-color: var(--primary);
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.input-nominal-custom {
+    display: flex;
+    align-items: center;
+    background: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+.rp-text {
+    font-weight: 700;
+    color: #475569;
+    margin-right: 0.5rem;
+}
+
+.input-field {
+    border: none;
+    background: transparent;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: var(--dark-slate);
+    outline: none;
+    flex-grow: 1;
+}
+
+.input-field::placeholder { color: #94a3b8; }
+input.input-field {
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    background: #f8fafc;
+}
+input.input-field:focus {
+    border-color: var(--primary);
+    background: white;
+}
+
+/* Opsi Pembayaran (Radio) */
+.metode-bayar-opsi {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.metode-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: border-color 0.2s;
+}
+
+.metode-label:hover { border-color: var(--primary); }
+.metode-label div { display: flex; align-items: center; gap: 0.75rem; }
+.metode-label span.material-symbols-outlined { color: var(--primary); }
+
+.data-diri-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.btn-submit-donasi {
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--primary);
+    color: white;
+    font-size: 1.125rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-submit-donasi:hover {
+    background-color: #0277bd;
+}
+
+/* Responsif Layar Kecil */
+@media (max-width: 1024px) {
+    .form-donasi-wrapper { grid-template-columns: 1fr; gap: 2rem; }
+    .kategori-donasi-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+    .kategori-donasi-grid { grid-template-columns: 1fr; }
+    .nominal-grid { grid-template-columns: 1fr; }
+    .data-diri-grid { grid-template-columns: 1fr; }
+}
+/* =========================================================
+   TAMBAHAN CSS UNTUK HALAMAN PENYALURAN DONASI (DASHBOARD)
+   ========================================================= */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.dashboard-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+/* Garis warna di atas kartu */
+.dashboard-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+}
+
+.dashboard-card.dana-masuk::before { background-color: #10b981; /* Hijau */ }
+.dashboard-card.dana-keluar::before { background-color: #f59e0b; /* Kuning/Orange */ }
+.dashboard-card.saldo-akhir::before { background-color: var(--primary); /* Biru Utama */ }
+
+/* Desain Lingkaran Ikon */
+.dashboard-card .icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.dashboard-card.dana-masuk .icon-box { background-color: #d1fae5; color: #10b981; }
+.dashboard-card.dana-keluar .icon-box { background-color: #fef3c7; color: #f59e0b; }
+.dashboard-card.saldo-akhir .icon-box { background-color: var(--light-sky); color: var(--primary); }
+
+/* Teks dan Angka */
+.dashboard-card p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dashboard-card h3 {
+    margin: 0.5rem 0;
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--deep-royal);
+}
+
+.dashboard-card .keterangan {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+/* Responsif untuk Tablet dan HP */
+@media (max-width: 1024px) {
+    .dashboard-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+    .dashboard-grid { grid-template-columns: 1fr; }
+}
