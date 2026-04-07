@@ -26,7 +26,7 @@
                 </div>
             </div>
             
-            <nav class="main-nav">
+            <nav class="main-nav" id="menu-navigasi">
                 
                 <div class="dropdown">
                     <a href="#" class="nav-link">Profil</a>
@@ -70,6 +70,9 @@
                 <a href="Donasi.html" class="btn-donasi">Donasi</a>
                 <a href="#footer-kontak" class="icon-bantuan">
                 </a>
+                <button class="menu-toggle" id="btn-hamburger">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
             </div>
             
         </div>
@@ -214,6 +217,7 @@
             </div>
         </div>
     </footer>
+
 <script>
     function updateWaktu() {
         const sekarang = new Date();
@@ -233,6 +237,17 @@
     // Jalankan fungsi setiap 1000 milidetik (1 detik)
     setInterval(updateWaktu, 1000);
     updateWaktu(); // Panggil sekali di awal agar tidak delay
+
+    // 3. Script untuk Mengatur Menu Hamburger di HP
+    const btnHamburger = document.getElementById('btn-hamburger');
+    const menuNavigasi = document.getElementById('menu-navigasi');
+
+    if(btnHamburger) {
+        btnHamburger.addEventListener('click', function() {
+            // Menambah atau menghapus class 'aktif' saat tombol diklik
+            menuNavigasi.classList.toggle('aktif');
+        });
+    }
 </script>
 </body>
 </html>

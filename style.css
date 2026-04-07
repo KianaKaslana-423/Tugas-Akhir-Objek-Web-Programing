@@ -1289,3 +1289,260 @@ input.input-field:focus {
 @media (max-width: 640px) {
     .dashboard-grid { grid-template-columns: 1fr; }
 }
+/* =========================================================
+   TAMBAHAN CSS UNTUK HALAMAN SEJARAH
+   ========================================================= */
+
+.sejarah-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Membagi layar jadi 2 kolom: kiri teks, kanan gambar */
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.sejarah-text p {
+    color: #475569;
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify; /* Membuat teks rata kanan-kiri agar rapi seperti buku */
+}
+
+.sejarah-image img {
+    width: 100%;
+    border-radius: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    border: 8px solid white; /* Memberi efek bingkai putih */
+    outline: 2px solid var(--light-sky); /* Garis luar bingkai biru muda */
+}
+
+/* Responsif untuk Layar Tablet dan HP */
+@media (max-width: 1024px) {
+    .sejarah-grid {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .sejarah-grid {
+        grid-template-columns: 1fr; /* Mengubah jadi 1 kolom (gambar pindah ke bawah teks) di HP */
+    }
+}
+/* =========================================================
+   TAMBAHAN CSS UNTUK HALAMAN VISI & MISI
+   ========================================================= */
+
+/* Gaya untuk kutipan Visi */
+.visi-quote {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--deep-royal);
+    line-height: 1.4;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .visi-quote { font-size: 2.5rem; }
+}
+
+/* Membagi area Misi menjadi Kiri (Judul) dan Kanan (Daftar Misi) */
+.misi-wrapper {
+    display: flex;
+    gap: 4rem;
+    align-items: flex-start;
+}
+
+.misi-header {
+    flex: 1;
+}
+
+.misi-content {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Gaya Kartu Misi */
+.misi-card {
+    display: flex;
+    gap: 1.5rem;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.misi-number {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.misi-text h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.125rem;
+    color: var(--deep-royal);
+}
+
+.misi-text p {
+    margin: 0;
+    color: #475569;
+    line-height: 1.6;
+}
+
+/* Gaya Grid 4 Kolom untuk Tujuan Strategis */
+.tujuan-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.tujuan-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s;
+}
+
+.tujuan-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.icon-tujuan {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.tujuan-card h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--deep-royal);
+    font-size: 1.125rem;
+}
+
+.tujuan-card p {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Responsif Layar Kecil (Tablet & HP) */
+@media (max-width: 1024px) {
+    .tujuan-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .misi-wrapper { flex-direction: column; gap: 2rem; }
+    .tujuan-grid { grid-template-columns: 1fr; }
+}
+/* =========================================================
+   PENGATURAN RESPONSIVITY MENU MOBILE (HP)
+   ========================================================= */
+
+/* Sembunyikan tombol hamburger di Laptop */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--deep-royal);
+    cursor: pointer;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.menu-toggle span {
+    font-size: 2rem;
+}
+
+/* Pengaturan Khusus Layar HP & Tablet */
+/* =========================================================
+   PENGATURAN RESPONSIVITY MENU MOBILE (HP) - VERSI FINAL
+   ========================================================= */
+
+@media (max-width: 1024px) {
+    /* 1. Munculkan tombol hamburger & sembunyikan ikon bantuan */
+    .menu-toggle { display: block !important; }
+    .action-area .icon-bantuan { display: none !important; }
+
+    /* 2. Kunci posisi header agar menu bisa melayang tepat di bawahnya */
+    .header-container { position: relative !important; }
+
+    /* 3. Desain Kotak Menu Utama (Melayang di atas gambar) */
+    .main-nav {
+        display: none !important; 
+        position: absolute !important; /* Paksa melayang */
+        top: 100% !important;
+        left: 0 !important;
+        width: 100% !important;
+        background-color: white !important;
+        flex-direction: column !important;
+        padding: 0 !important;
+        box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2) !important;
+        z-index: 9999 !important; /* Pastikan selalu di paling atas */
+    }
+
+    /* Munculkan saat diklik */
+    .main-nav.aktif { display: flex !important; }
+
+    /* 4. Desain Baris Menu (Rapikan jarak dan garis pemisah) */
+    .main-nav .dropdown {
+        width: 100% !important;
+        border-bottom: 1px solid #f1f5f9 !important; /* Garis abu-abu tipis pembatas menu */
+    }
+
+    /* Bersihkan gaya teks agar tidak ada blok biru */
+    .main-nav .nav-link {
+        display: block !important;
+        padding: 1rem 1.5rem !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: left !important;
+        color: var(--deep-royal) !important;
+        background: transparent !important; /* Hilangkan background biru */
+        font-weight: 700 !important;
+        text-decoration: none !important;
+    }
+
+    /* 5. Desain Anak Menu (Sub-menu) */
+    .main-nav .dropdown-content {
+        position: static !important; /* Tidak melayang ke samping lagi */
+        box-shadow: none !important;
+        background-color: #f8fafc !important; /* Warna abu-abu sangat muda */
+        display: none !important;
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Tampilkan anak menu saat induknya ditekan */
+    .main-nav .dropdown:hover .dropdown-content,
+    .main-nav .dropdown:active .dropdown-content {
+        display: block !important;
+    }
+
+    /* Rapikan teks anak menu */
+    .main-nav .dropdown-content a {
+        display: block !important;
+        padding: 0.75rem 1.5rem 0.75rem 2.5rem !important; /* Menjorok ke dalam agar rapi */
+        color: #475569 !important;
+        background: transparent !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        text-decoration: none !important;
+        font-size: 0.9rem !important;
+    }
+}
